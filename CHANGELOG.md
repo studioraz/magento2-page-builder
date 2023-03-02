@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2023-03-02
 ### Added
 - Project init
-- Add plugin to change the Tyne MCE configuration for the Page Builder
+- Add plugin to change the TinyMCE configuration for the Page Builder
 - Add configuration for the font weight to the Page Builder
 
 

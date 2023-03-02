@@ -12,7 +12,7 @@ use Magento\Framework\DataObject;
 use Magento\PageBuilder\Model\Wysiwyg\DefaultConfigProvider;
 
 /**
- * Class changes styles format configuration for the tyne_mce styles for the page builder
+ * Class changes styles format configuration for the TinyMCE styles for the page builder
  */
 class ChangedConfigStyleFormatsPlugin
 {

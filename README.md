@@ -1,7 +1,7 @@
-# Magento 2 module to change the page builder Tyne MCE settings
+# Magento 2 module to change the page builder Tiny MCE settings
 
 ## Features
-1. Changes the Tyne MCE settings for the Page Builder
+1. Changes the TinyMCE settings for the Page Builder
 2. Adds new styles for the Text Area Editor in Page Builder
 
 ## Installation
@@ -18,11 +18,11 @@
 
 3. Install this module within Magento 2 using composer
     ```
-    composer require studioraz/magento2-{module-name}
+    composer require studioraz/magento2-page-builder
     ```
 
 4. After this, enable the module as usual
     ```
-    bin/magento mo:e SR_{ModuleName} &&
+    bin/magento mo:e SR_PageBuilder &&
     bin/magento s:up
     ```
