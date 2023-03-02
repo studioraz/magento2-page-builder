@@ -1,22 +1,23 @@
 {
-    "name": "studioraz/magento2-{module-name}",
-    "description": "{description}",
+    "name": "studioraz/magento2-page-builder",
+    "description": "Magento 2 module to change the page builder Tyne MCE settings",
     "type": "magento2-module",
     "prefer-stable": true,
-    "version": "{version}",
+    "version": "1.0.0",
     "license": [
         "proprietary"
     ],
     "require": {
         "magento/framework": "*",
-        "studioraz/magento2-base": "*"
+        "studioraz/magento2-base": "*",
+        "magento/module-page-builder": "2.2.*"
     },
     "autoload": {
         "files": [
             "registration.php"
         ],
         "psr-4": {
-            "SR\\{ModuleName}\\": ""
+            "SR\\PageBuilder\\": ""
         }
     },
     "support": {
