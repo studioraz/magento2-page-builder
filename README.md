@@ -1,18 +1,8 @@
-```
-Template Repository for Magento 2 repository module
-
-To create a new repository based on this repository choose it on the "Create a new repository" page's Repository template drop-down. 
-
-1. Replace template variables {ModuleName}, {title}, {description}, {version} {module-name} with real values.
-3. Update README content below
-4. Remove this whole section 
-```
-
-# Studio Raz Magento 2 for {title}
+# Magento 2 module to change the page builder Tyne MCE settings
 
 ## Features
-1. ...
-2. ...
+1. Changes the Tyne MCE settings for the Page Builder
+2. Adds new styles for the Text Area Editor in Page Builder
 
 ## Installation
 

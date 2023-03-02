@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\PageBuilder\Model\Wysiwyg\DefaultConfigProvider">
+        <arguments>
+            <argument name="additionalSettings" xsi:type="array">
+                <item name="style_formats" xsi:type="array">
+                    <item name="font-weight-100" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 100</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">100</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-200" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 200</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">200</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-300" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 300</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">300</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-400" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 400</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">400</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-500" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 500</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">500</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-600" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 600</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">600</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-700" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 700</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">700</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-800" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 800</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">800</item>
+                        </item>
+                    </item>
+                    <item name="font-weight-900" xsi:type="array">
+                        <item name="title" xsi:type="string">Font Weight 900</item>
+                        <item name="inline" xsi:type="string">span</item>
+                        <item name="styles" xsi:type="array">
+                            <item name="font-weight" xsi:type="string">900</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+        <plugin name="sr_change_style_formats_plugin"
+                type="SR\PageBuilder\Plugin\ChangedConfigStyleFormatsPlugin"
+                sortOrder="10"/>
+    </type>
+</config>
