@@ -1,0 +1,33 @@
+// /**
+//  * Copyright © 2023 Studio Raz. All rights reserved.
+//  * For more information contact us at dev@studioraz.co.il
+//  */
+.tablet-viewport {
+    &.pagebuilder-stage-wrapper {
+        &.stage-content-snapshot,
+        &.stage-full-screen {
+            .pagebuilder-stage {
+                .pagebuilder-canvas {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 768px;
+                }
+            }
+        }
+    }
+}
+
+.mobile-small-viewport {
+    &.pagebuilder-stage-wrapper {
+        &.stage-content-snapshot,
+        &.stage-full-screen {
+            .pagebuilder-stage {
+                .pagebuilder-canvas {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 640px;
+                }
+            }
+        }
+    }
+}

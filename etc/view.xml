@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+    <vars module="Magento_PageBuilder">
+        <var name="breakpoints">
+            <var name="tablet">
+                <var name="label">Tablet</var>
+                <var name="stage">true</var>
+                <var name="class">mobile-switcher</var>
+                <var name="icon">SR_PageBuilder::css/images/switcher/switcher-tablet.svg</var>
+                <var name="media">only screen and (max-width: 768px)</var>
+                <var name="conditions">
+                    <var name="max-width">768px</var>
+                    <var name="min-width">768px</var>
+                </var>
+            </var>
+            <var name="mobile-small">
+                <var name="label">Mobile Small</var>
+                <var name="stage">true</var>
+                <var name="class">mobile-small-switcher</var>
+                <var name="icon">SR_PageBuilder::css/images/switcher/switcher-mobile-small.svg</var>
+                <var name="media">only screen and (max-width: 640px)</var>
+                <var name="conditions">
+                    <var name="max-width">640px</var>
+                </var>
+            </var>
+        </var>
+    </vars>
+</view>
