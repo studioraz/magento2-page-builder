@@ -8,27 +8,94 @@
 <view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
     <vars module="Magento_PageBuilder">
         <var name="breakpoints">
+            <var name="laptop">
+                <var name="label">Laptop</var>
+                <var name="stage">true</var>
+                <var name="class">laptop-switcher</var>
+                <var name="icon">SR_PageBuilder::css/images/switcher/switcher-laptop.svg</var>
+                <var name="media">only screen and (max-width: 1360px)</var>
+                <var name="conditions">
+                    <var name="max-width">1360px</var>
+                    <var name="min-width">1024px</var>
+                </var>
+                <var name="options">
+                    <var name="products">
+                        <var name="default">
+                            <var name="slidesToShow">3</var>
+                        </var>
+                        <var name="continuous">
+                            <var name="slidesToShow">3</var>
+                        </var>
+                    </var>
+                </var>
+            </var>
+
             <var name="tablet">
                 <var name="label">Tablet</var>
                 <var name="stage">true</var>
-                <var name="class">mobile-switcher</var>
+                <var name="class">tablet-switcher</var>
                 <var name="icon">SR_PageBuilder::css/images/switcher/switcher-tablet.svg</var>
                 <var name="media">only screen and (max-width: 768px)</var>
+
                 <var name="conditions">
                     <var name="max-width">768px</var>
-                    <var name="min-width">768px</var>
+                    <var name="min-width">0</var>
+                </var>
+                <var name="options">
+                    <var name="products">
+                        <var name="default">
+                            <var name="slidesToShow">3</var>
+                        </var>
+                        <var name="continuous">
+                            <var name="slidesToShow">2</var>
+                        </var>
+                    </var>
                 </var>
             </var>
+
+            <var name="mobile">
+                <var name="label">Mobile</var>
+                <var name="stage">true</var>
+                <var name="class">mobile-switcher</var>
+                <var name="icon">Magento_PageBuilder::css/images/switcher/switcher-mobile.svg</var>
+                <var name="media">only screen and (max-width: 475px)</var>
+                <var name="conditions">
+                    <var name="max-width">475px</var>
+                    <var name="min-width">0</var>
+                </var>
+                <var name="options">
+                    <var name="products">
+                        <var name="default">
+                            <var name="slidesToShow">2</var>
+                        </var>
+                    </var>
+                </var>
+            </var>
+
+            <!--
+            TODO: to add this viewport to the Page Builder stage additional styles for different content types should be implemented.
+            See how mobile viewport styles were implemented vendor/magento/module-page-builder/view/adminhtml/web/css/source/content-type
+
             <var name="mobile-small">
                 <var name="label">Mobile Small</var>
                 <var name="stage">true</var>
-                <var name="class">mobile-small-switcher</var>
+                <var name="class">mobile-switcher</var>
                 <var name="icon">SR_PageBuilder::css/images/switcher/switcher-mobile-small.svg</var>
-                <var name="media">only screen and (max-width: 640px)</var>
+                <var name="media">only screen and (max-width: 325px)</var>
                 <var name="conditions">
-                    <var name="max-width">640px</var>
+                    <var name="max-width">325px</var>
+                    <var name="min-width">0</var>
+                </var>
+                <var name="options">
+                    <var name="products">
+                        <var name="default">
+                            <var name="slidesToShow">2</var>
+                        </var>
+                    </var>
                 </var>
             </var>
+            -->
+
         </var>
     </vars>
 </view>
