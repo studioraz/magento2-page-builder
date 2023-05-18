@@ -4,6 +4,26 @@
  */
 
 .pagebuilder_modal_form_pagebuilder_modal_form_modal {
-    max-height: 40%;
-    top: calc(~'100% - 40%');
+    max-height: 50%;
+    top: calc(~'100% - 50%');
+
+    .modal-header {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 99999;
+    }
+
+    .page-main-actions {
+        margin: 0;
+    }
+
+    .action-close {
+        display: none;
+    }
+
+    .modal-title {
+        position: absolute;
+        top: 30px;
+    }
 }
