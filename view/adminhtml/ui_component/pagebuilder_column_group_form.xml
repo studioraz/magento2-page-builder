@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd" extends="pagebuilder_base_form_with_background_attributes">
+    <fieldset name="general">
+        <field name="column_layout_mobile" sortOrder="45" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="rows" xsi:type="number">10</item>
+                    <item name="additionalInfo" xsi:type="string" translate="true">
+                        <![CDATA[
+
+                        ]]>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Number of columns on mobile</label>
+            </settings>
+        </field>
+        <field name="column_layout_tablet" sortOrder="50" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="rows" xsi:type="number">10</item>
+                    <item name="additionalInfo" xsi:type="string" translate="true">
+                        <![CDATA[
+
+                        ]]>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Number of columns on tablet</label>
+            </settings>
+        </field>
+        <field name="column_layout_laptop" sortOrder="55" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="rows" xsi:type="number">10</item>
+                    <item name="additionalInfo" xsi:type="string" translate="true">
+                        <![CDATA[
+
+                        ]]>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Number of columns on   laptop</label>
+            </settings>
+        </field>
+        <field name="column_layout_desktop" sortOrder="60" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="rows" xsi:type="number">10</item>
+                    <item name="additionalInfo" xsi:type="string" translate="true">
+                        <![CDATA[
+
+                        ]]>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Number of columns on desktop </label>
+            </settings>
+        </field>
+    </fieldset>
+</form>

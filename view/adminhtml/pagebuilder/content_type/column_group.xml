@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="column-group">
+        <appearances>
+            <appearance name="default">
+                <elements>
+                    <element name="main">
+                        <attribute name="column_layout_mobile" source="grid-mobile"/>
+                        <attribute name="column_layout_tablet" source="grid-tablet"/>
+                        <attribute name="column_layout_laptop" source="grid-laptop"/>
+                        <attribute name="column_layout_desktop" source="grid-desktop"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>
