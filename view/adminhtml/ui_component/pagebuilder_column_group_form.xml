@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="grid_columns" sortOrder="21" component="SR_PageBuilder/js/form/components/fieldset-with-description">
+        <settings>
+            <label translate="true">
+                {
+                    "label": "Grid Columns",
+                    "description": "Configure the grid column per screen size. Currently, applicable for Hyva theme only. Note: the number of columns for large screens, typically from 1280px and above, are managed by native Magento page builder capabilities"
+                }
+            </label>
+            <collapsible>true</collapsible>
+            <opened>true</opened>
+        </settings>
+
+        <field name="column_layout_sm" sortOrder="10" formElement="input">
+            <settings>
+                <label translate="true">Mobile</label>
+                <notice translate="true">Tailwind breakpoints 0 - sm, typically between 0 - 639px</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                </additionalClasses>
+            </settings>
+        </field>
+
+        <field name="column_layout_md" sortOrder="20" formElement="input">
+            <settings>
+                <label translate="true">Tablet Portrait</label>
+                <notice translate="true">Tailwind breakpoints sm - md, typically between 640 - 767</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                </additionalClasses>
+            </settings>
+        </field>
+
+        <field name="column_layout_lg" sortOrder="30" formElement="input">
+            <settings>
+                <label translate="true">Tablet Horizontal</label>
+                <notice translate="true">Tailwind breakpoints md - lg, typically between 768 - 1023</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                </additionalClasses>
+            </settings>
+        </field>
+
+        <field name="column_layout_xl" sortOrder="40" formElement="input">
+            <settings>
+                <label translate="true">Laptop and Small Screens</label>
+                <notice translate="true">Tailwind breakpoints lg - xl, typically between 1024 - 1279</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                </additionalClasses>
+            </settings>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="column-group">
+        <appearances>
+            <appearance name="default">
+                <elements>
+                    <element name="main">
+                        <style name="column_layout_sm"
+                               source="css_var_column_layout_sm"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+
+                        <style name="column_layout_md"
+                               source="css_var_column_layout_md"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+
+                        <style name="column_layout_lg"
+                               source="css_var_column_layout_lg"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+
+                        <style name="column_layout_xl"
+                               source="css_var_column_layout_xl"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>
