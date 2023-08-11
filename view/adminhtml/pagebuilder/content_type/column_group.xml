@@ -23,6 +23,10 @@
                         <style name="column_layout_lg"
                                source="css_var_column_layout_lg"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
+
+                        <style name="column_layout_xl"
+                               source="css_var_column_layout_xl"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
                     </element>
                 </elements>
             </appearance>
