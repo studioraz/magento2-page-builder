@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.1] - 2023-08-10
 ### Added
 - Implemented PB Columns grid
+- Implemented fieldset with description
 
 ## [1.0.0] - 2023-03-02
 ### Added
