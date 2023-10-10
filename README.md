@@ -1,8 +1,11 @@
-# Magento 2 module to change the page builder Tiny MCE settings
+# Magento Page Builder Extra Features module 
 
 ## Features
-1. Changes the TinyMCE settings for the Page Builder
+1. Change the TinyMCE settings for the Page Builder
 2. Adds new styles for the Text Area Editor in Page Builder
+3. Accordion content type
+4. HTML Video content type
+5. Additional Preview Viewports: laptop (1024px - 1279px) and tablet (768px - 1023px)
 
 ## Installation
 
