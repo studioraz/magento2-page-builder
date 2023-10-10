@@ -48,6 +48,7 @@
                         <attribute name="muted" storage_key="muted" source="muted" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
                         <attribute name="controls" storage_key="controls" source="controls" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
                         <attribute name="loop" storage_key="loop" source="loop" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
+                        <attribute name="preload" storage_key="preload" source="preload" converter="SR_PageBuilder/js/content-type/video/converter/attribute/preload" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/preload"/>
                     </element>
                 </elements>
             </appearance>
