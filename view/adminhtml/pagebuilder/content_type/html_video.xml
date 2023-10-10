@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+ * Copyright © 2023 Studio Raz. All rights reserved.
+ * See LICENSE.txt for license details.
+ **/
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
     <type name="html_video"
@@ -20,8 +20,8 @@
         <appearances>
             <appearance default="true"
                         name="default"
-                        preview_template="Magento_PageBuilder/content-type/video/default/preview"
-                        master_template="Magento_PageBuilder/content-type/video/default/master"
+                        preview_template="SR_PageBuilder/content-type/video/default/preview"
+                        master_template="SR_PageBuilder/content-type/video/default/master"
                         reader="Magento_PageBuilder/js/master-format/read/configurable">
                 <elements>
                     <element name="main">
@@ -44,8 +44,10 @@
                     </element>
                     <element name="video">
                         <attribute name="video_source" source="src" converter="SR_PageBuilder/js/content-type/video/converter/attribute/videosrc" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/videosrc"/>
-                        <attribute name="autoplay" storage_key="autoplay" source="autoplay" converter="Magento_PageBuilder/js/content-type/video/converter/attribute/autoplay"/>
-                        <attribute name="muted_video" storage_key="autoplay" source="muted" converter="Magento_PageBuilder/js/content-type/video/converter/attribute/autoplay"/>
+                        <attribute name="autoplay" storage_key="autoplay" source="autoplay" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
+                        <attribute name="muted" storage_key="muted" source="muted" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
+                        <attribute name="controls" storage_key="controls" source="controls" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
+                        <attribute name="loop" storage_key="loop" source="loop" converter="SR_PageBuilder/js/content-type/video/converter/attribute/status" preview_converter="SR_PageBuilder/js/content-type/video/converter/attribute/status"/>
                     </element>
                 </elements>
             </appearance>

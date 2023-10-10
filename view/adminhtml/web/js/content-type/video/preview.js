@@ -49,9 +49,6 @@ define(["Magento_PageBuilder/js/content-type-menu/hide-show-option", "Magento_Pa
             return options;
         };
 
-        _proto.isHosted = function isHosted(src) {
-            return false;
-        }
         /**.
          * After render callback
          *
@@ -62,7 +59,7 @@ define(["Magento_PageBuilder/js/content-type-menu/hide-show-option", "Magento_Pa
 
         _proto.onAfterRender = function onAfterRender(videoElement, self) {
             // Assign muted attribute explicitly due to API issues
-            videoElement.muted = self.data.video.attributes().autoplay;
+            videoElement.muted = (self.data.video.attributes().autoplay && self.data.video.attributes().muted);
         };
 
         return Preview;

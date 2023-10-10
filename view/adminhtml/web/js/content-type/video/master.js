@@ -26,10 +26,6 @@ define(["Magento_PageBuilder/js/content-type/master"], function (_master) {
 
         var _proto = Master.prototype;
 
-        _proto.isHosted = function isHosted(src) {
-            return false;
-        };
-
         return Master;
     }(_master);
 
