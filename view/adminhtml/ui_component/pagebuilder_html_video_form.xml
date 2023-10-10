@@ -127,7 +127,7 @@
             </argument>
             <settings>
                 <dataType>boolean</dataType>
-                <label translate="true">Controls</label>
+                <label translate="true">Show Controls</label>
                 <dataScope>controls</dataScope>
             </settings>
             <formElements>
