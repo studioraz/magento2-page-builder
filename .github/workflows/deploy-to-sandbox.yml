@@ -1,0 +1,36 @@
+name: Deploy Module Branch to Sandbox
+on:
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      SANDBOX_ENV_HOST:
+        required: true
+      SANDBOX_ENV_USERNAME:
+        required: true
+      SANDBOX_ENV_SSH_KEY:
+        required: true
+jobs:
+  deploy-to-sandbox:
+    name: Deploy to Sandbox
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v6
+      - name: Set repository name
+        run: echo "repository_name=${{ github.repository }}" >> $GITHUB_ENV
+      - name: Access sandbox environment & upgrade the module
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SANDBOX_ENV_HOST }}
+          username: ${{ secrets.SANDBOX_ENV_USERNAME }}
+          key: ${{ secrets.SANDBOX_ENV_SSH_KEY }}
+          script_stop: true
+          script: |
+            docker-compose exec -T --user devilbox php bash -c "cd m246/magento \
+            && composer require ${{ env.repository_name }}:dev-${{ steps.branch-name.outputs.current_branch }} --no-interaction \
+            && bin/magento setup:upgrade \
+            && bin/magento setup:di:compile \
+            && bin/magento cache:clean"
