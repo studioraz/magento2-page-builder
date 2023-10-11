@@ -82,7 +82,7 @@
                 <dataType>text</dataType>
                 <label translate="true">Video URL</label>
                 <tooltip>
-                    <description translate="true">Video URLs can be links to videos on YouTube or Vimeo, or HTTP(S) links to files with valid video extensions (we recommend .mp4)</description>
+                    <description translate="true">Video URLs can be linked to HTTP(S) files with valid video extensions (we recommend .mp4)</description>
                 </tooltip>
             </settings>
         </field>
