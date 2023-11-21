@@ -1,0 +1,12 @@
+{
+    "cms_block": {
+        "column": {
+            "is_rtl": true
+        }
+    },
+    "cms_page": {
+        "column": {
+            "is_rtl": true
+        }
+    }
+}

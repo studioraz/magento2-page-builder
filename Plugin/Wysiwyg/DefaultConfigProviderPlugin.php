@@ -48,17 +48,11 @@ class DefaultConfigProviderPlugin
 
         $settings['plugins'] = $this->getPlugins();
 
-        $settings['toolbar1'] = 'magentovariable magentowidget | formatselect | styleselect | fontselect | fontsizeselect | lineheight | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ltr rtl';
-        $settings['toolbar2'] = ' undo redo  | link anchor table charmap | image media insertdatetime | widget | searchreplace visualblocks  help | hr pagebreak | emoticons';
+        $settings['toolbar1'] = 'magentovariable magentowidget | prosewrapper | formatselect | styleselect | fontselect | fontsizeselect | lineheight | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ltr rtl';
+        $settings['toolbar2'] = ' undo redo | link anchor table charmap | image media insertdatetime | widget | searchreplace visualblocks  help | hr pagebreak | emoticons';
         $settings['force_p_newlines'] = false;
 
         $settings['valid_children'] = '+body[style]';
-
-        /**
-         * This option allows you to set the base direction of directionally neutral text (i.e., text that doesn’t have inherent directionality as defined in Unicode) within the editor. This is similar to the use of the 'dir' attribute when using content editable elements by themselves.
-         * TODO: set this value based on the store locale or other clever condition
-         */
-        $settings['directionality'] = 'rtl';
 
         $result->setData('settings', $settings);
 
@@ -102,7 +96,8 @@ class DefaultConfigProviderPlugin
             'wordcount', // Displays a word and character count
             'magentovariable', // Specific to Magento, allows for inserting Magento variables
             'magentowidget', // Specific to Magento, enables inserting Magento widgets
-            'emoticons' // Adds a button to insert emoticons
+            'emoticons', // Adds a button to insert emoticons
+            'prosewrapper', // Adds a button to wrap content in div with class prose for Hyva theme
         ];
 
         return implode(' ', $plugins);

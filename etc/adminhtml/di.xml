@@ -16,6 +16,10 @@
                 sortOrder="10"/>
     </type>
 
+    <type name="Magento\Cms\Model\Wysiwyg\Config">
+        <plugin name="studioraz_prose_tinymceplugin_wysiwyg_config_plugin" type="SR\PageBuilder\Plugin\Wysiwyg\ConfigPlugin"/>
+    </type>
+
     <!-- FAQ CONTENT TYPE start -->
     <virtualType name="AppearanceSourceFaq" type="Magento\PageBuilder\Model\Source\VisualSelect">
         <arguments>
