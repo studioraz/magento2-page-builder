@@ -17,9 +17,6 @@ var config = {
             },
             'mage/adminhtml/wysiwyg/tiny_mce/tinymce5Adapter': {
                 'SR_PageBuilder/js/mixin-tinymce5adapter': true
-            },
-            'Hyva_CmsTailwindJit/js/pagebuilder/jit/abstractPreview': {
-                'SR_PageBuilder/js/pagebuilder/jit/abstractPreview-mixin': true
             }
         }
     }

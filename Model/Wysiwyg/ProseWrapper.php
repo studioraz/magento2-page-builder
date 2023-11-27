@@ -31,11 +31,7 @@ class ProseWrapper
     {
         $proseWrapper = [
             [   'name' => self::PLUGIN_NAME,
-                'src' => $this->getWysiwygJsPluginSrc(),
-                'options' => [
-                    'title' => __('TW Prose Wrapper'),
-                    'class' => 'add-prose-wrapper plugin'
-                ],
+                'src' => $this->getWysiwygJsPluginSrc()
             ]
         ];
 
@@ -55,4 +51,6 @@ class ProseWrapper
             sprintf('SR_PageBuilder::js/tiny_mce/plugins/%s/editor_plugin.js', self::PLUGIN_NAME)
         );
     }
+
 }
+

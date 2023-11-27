@@ -8,26 +8,39 @@ declare(strict_types=1);
 
 namespace SR\PageBuilder\Plugin\Wysiwyg;
 
+use Magento\Ui\Component\Wysiwyg\ConfigInterface;
 use Magento\Framework\DataObject;
-use Magento\PageBuilder\Model\Wysiwyg\DefaultConfigProvider;
 
 /**
  * Class changes styles format configuration for the TinyMCE styles for the page builder
  */
 class DefaultConfigProviderPlugin
 {
+
     /**
-     * @param  DefaultConfigProvider $subject
-     * @param  DataObject            $result
-     * @param  DataObject            $config
+     * Enable variables & widgets on product edit page
+     *
+     * @param ConfigInterface $configInterface
+     * @param array $data
+     * @return array
+     */
+    public function beforeGetConfig(ConfigInterface $configInterface, $data = [])
+    {
+        $data['add_variables'] = true;
+        $data['add_widgets'] = true;
+
+        return [$data];
+    }
+
+    /**
+     * @param ConfigInterface $configInterface
+     * @param DataObject $result
      * @return DataObject
      */
     public function afterGetConfig(
-        DefaultConfigProvider $subject,
-        DataObject $result,
-        DataObject $config
-    ): DataObject
-    {
+        ConfigInterface $configInterface,
+        DataObject $result
+    ) {
         $settings = $result->getData('settings');
 
         if (!is_array($settings)) {
@@ -49,7 +62,7 @@ class DefaultConfigProviderPlugin
         $settings['plugins'] = $this->getPlugins();
 
         $settings['toolbar1'] = 'magentovariable magentowidget | prosewrapper | formatselect | styleselect | fontselect | fontsizeselect | lineheight | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ltr rtl';
-        $settings['toolbar2'] = ' undo redo | link anchor table charmap | image media insertdatetime | widget | searchreplace visualblocks  help | hr pagebreak | emoticons';
+        $settings['toolbar2'] = ' undo redo  | link anchor table charmap | image media insertdatetime | widget | searchreplace visualblocks  help | hr pagebreak | emoticons';
         $settings['force_p_newlines'] = false;
 
         $settings['valid_children'] = '+body[style]';

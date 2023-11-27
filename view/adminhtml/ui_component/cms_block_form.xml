@@ -16,7 +16,7 @@
             </argument>
             <settings>
                 <dataType>boolean</dataType>
-                <label translate="true">Enable RTL</label>
+                <label translate="true">Is RTL</label>
                 <dataScope>is_rtl</dataScope>
             </settings>
             <formElements>

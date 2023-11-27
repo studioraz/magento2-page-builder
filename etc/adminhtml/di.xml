@@ -9,7 +9,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
     <!-- customize wysiwyg default configuration -->
-    <type name="Magento\PageBuilder\Model\Wysiwyg\DefaultConfigProvider">
+    <type name="Magento\Ui\Component\Wysiwyg\ConfigInterface">
         <plugin name="sr_page_builder_wysiwyg_default_config_provider"
                 type="SR\PageBuilder\Plugin\Wysiwyg\DefaultConfigProviderPlugin"
                 disabled="false"
