@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block name="pagebuilder_slider_css_variables_ui" template="SR_PageBuilder::pagebuilder_slider_css_variables_ui.phtml"/>
+        </referenceBlock>
+    </body>
+</page>
