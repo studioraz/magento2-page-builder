@@ -25,7 +25,14 @@ define(["Magento_PageBuilder/js/utils/string"], function (_string) {
      */
     _proto.read = function read(element, source) {
         let cssVarName = source.replace('css_var_', '').replaceAll('_', '-');
-        let elemStyles = element.getAttribute('data-desktop-style').split(';');
+        let elemStylesSource = element.getAttribute('data-desktop-style');
+
+        if (!elemStylesSource) {
+            var camelCasedSource = (0, _string.fromSnakeToCamelCase)(source);
+            return element.style[camelCasedSource];
+        }
+
+        let elemStyles = elemStylesSource.split(';');
         let targetStyleLine = elemStyles.filter(function name(elem) {
             return elem.includes(cssVarName);
         });
