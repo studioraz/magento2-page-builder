@@ -19,16 +19,17 @@ use Magento\Framework\View\Element\Template;
         /* NOTE: default values */
         --image-width-desktop: 1;
         --image-height-desktop: 1;
+        min-height: auto !important;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 639px) {
         .pagebuilder-slider [data-content-type="slide"],
         .pagebuilder-slider .pagebuilder-slide-wrapper {
             aspect-ratio: var(--image-width-mobile, var(--image-width-desktop)) / var(--image-height-mobile, var(--image-height-desktop));
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 640px) {
         .pagebuilder-slider [data-content-type="slide"],
         .pagebuilder-slider .pagebuilder-slide-wrapper {
             aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);

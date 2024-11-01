@@ -10,21 +10,37 @@
         <field name="image_width_desktop" sortOrder="21" formElement="input">
             <settings>
                 <label translate="true">Image Width Desktop</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
         <field name="image_height_desktop" sortOrder="22" formElement="input">
             <settings>
                 <label translate="true">Image Height Desktop</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
         <field name="image_width_mobile" sortOrder="23" formElement="input">
             <settings>
                 <label translate="true">Image Width Mobile</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
         <field name="image_height_mobile" sortOrder="24" formElement="input">
             <settings>
                 <label translate="true">Image Height Mobile</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
     </fieldset>
