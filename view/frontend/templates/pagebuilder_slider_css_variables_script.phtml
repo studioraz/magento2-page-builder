@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/**
+ * @var Template $block
+ * @var Escaper $escaper
+ */
+?>
+
+<script>
+    (() => {
+        const elements = document.querySelectorAll('.pagebuilder-slider');
+        const cssVarNames = ['--image-width-desktop', '--image-height-desktop'];
+
+        Array.from(elements).forEach(element => {
+            const hasSize = cssVarNames.filter(cssVarName => {
+                return getComputedStyle(element).getPropertyValue(cssVarName).trim();
+            }).length === cssVarNames.length;
+
+            if (hasSize) {
+                element.classList.add('has-size');
+            }
+        });
+    })();
+</script>
+
