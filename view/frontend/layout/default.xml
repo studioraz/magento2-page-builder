@@ -9,7 +9,10 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="head.additional">
-            <block name="pagebuilder_slider_css_variables_ui" template="SR_PageBuilder::pagebuilder_slider_css_variables_ui.phtml"/>
+            <block name="pagebuilder_slider_css_variables_ui" template="SR_PageBuilder::pagebuilder_slider_css_variables_styles.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="before.body.end">
+            <block name="pagebuilder_slider_css_variables_ui2" template="SR_PageBuilder::pagebuilder_slider_css_variables_script.phtml"/>
         </referenceBlock>
     </body>
 </page>
