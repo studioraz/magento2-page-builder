@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="banner">
+        <appearances>
+            <appearance name="collage-left">
+                <elements>
+                    <element name="main">
+                        <style name="image_width_desktop"
+                               source="css_var_image_width_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_desktop"
+                               source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_mobile"
+                               source="css_var_image_width_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_mobile"
+                               source="css_var_image_height_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="collage-centered">
+                <elements>
+                    <element name="main">
+                        <style name="image_width_desktop"
+                               source="css_var_image_width_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_desktop"
+                               source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_mobile"
+                               source="css_var_image_width_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_mobile"
+                               source="css_var_image_height_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="collage-right">
+                <elements>
+                    <element name="main">
+                        <style name="image_width_desktop"
+                               source="css_var_image_width_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_desktop"
+                               source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_mobile"
+                               source="css_var_image_width_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_mobile"
+                               source="css_var_image_height_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="poster">
+                <elements>
+                    <element name="main">
+                        <style name="image_width_desktop"
+                               source="css_var_image_width_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_desktop"
+                               source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_mobile"
+                               source="css_var_image_width_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_mobile"
+                               source="css_var_image_height_mobile"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

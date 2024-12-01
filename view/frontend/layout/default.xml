@@ -10,9 +10,11 @@
     <body>
         <referenceBlock name="head.additional">
             <block name="pagebuilder_slider_css_variables_ui" template="SR_PageBuilder::pagebuilder_slider_css_variables_styles.phtml"/>
+            <block name="pagebuilder_banner_css_variables_ui" template="SR_PageBuilder::pagebuilder_banner_css_variables_styles.phtml"/>
         </referenceBlock>
         <referenceBlock name="before.body.end">
             <block name="pagebuilder_slider_css_variables_ui2" template="SR_PageBuilder::pagebuilder_slider_css_variables_script.phtml"/>
+            <block name="pagebuilder_slider_css_variables_ui2" template="SR_PageBuilder::pagebuilder_banner_css_variables_script.phtml"/>
         </referenceBlock>
     </body>
 </page>

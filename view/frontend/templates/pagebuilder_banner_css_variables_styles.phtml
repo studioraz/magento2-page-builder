@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+declare(strict_types=1);
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+/**
+ * @var Template $block
+ * @var Escaper $escaper
+ */
+?>
+<style>
+    [data-content-type="banner"].has-size {
+        /* NOTE: default values */
+
+    }
+    @media (max-width: 639px) {
+        [data-content-type="banner"].has-size .pagebuilder-overlay,
+        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-mobile, var(--image-width-desktop)) / var(--image-height-mobile, var(--image-height-desktop));
+        }
+    }
+    @media (min-width: 640px) {
+        [data-content-type="banner"].has-size .pagebuilder-overlay,
+        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);
+        }
+    }
+    [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
+        width: 100%;
+        min-height: auto !important;
+    }
+    [data-content-type="banner"].has-size .pagebuilder-overlay {
+        min-height: auto !important;
+    }
+</style>
