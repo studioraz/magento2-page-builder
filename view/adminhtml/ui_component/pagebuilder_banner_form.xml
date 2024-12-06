@@ -5,7 +5,32 @@
  * See LICENSE for license details.
  */
 -->
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd" extends="pagebuilder_base_form_with_background_video">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="background">
+        <field name="background_image_tablet" sortOrder="35" formElement="imageUploader">
+            <settings>
+                <label translate="true">Background Tablet Image</label>
+                <componentType>imageUploader</componentType>
+                <visible>false</visible>
+                <imports>
+                    <link name="visible">${$.parentName}.background_type:imageVisible</link>
+                </imports>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <maxFileSize>2097152</maxFileSize>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">pagebuilder/contenttype/image_upload</param>
+                        </uploaderConfig>
+                        <previewTmpl>Magento_PageBuilder/form/element/uploader/preview</previewTmpl>
+                    </settings>
+                </imageUploader>
+            </formElements>
+        </field>
+    </fieldset>
     <fieldset name="appearance_fieldset">
         <field name="image_width_desktop" sortOrder="21" formElement="input">
             <settings>
@@ -25,7 +50,25 @@
                 </validation>
             </settings>
         </field>
-        <field name="image_width_mobile" sortOrder="23" formElement="input">
+        <field name="image_width_tablet" sortOrder="23" formElement="input">
+            <settings>
+                <label translate="true">Image Width Tablet</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="image_height_tablet" sortOrder="24" formElement="input">
+            <settings>
+                <label translate="true">Image Height Tablet</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="image_width_mobile" sortOrder="25" formElement="input">
             <settings>
                 <label translate="true">Image Width Mobile</label>
                 <notice translate="true">Single number with no units</notice>
@@ -34,7 +77,7 @@
                 </validation>
             </settings>
         </field>
-        <field name="image_height_mobile" sortOrder="24" formElement="input">
+        <field name="image_height_mobile" sortOrder="26" formElement="input">
             <settings>
                 <label translate="true">Image Height Mobile</label>
                 <notice translate="true">Single number with no units</notice>

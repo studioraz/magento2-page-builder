@@ -79,7 +79,14 @@ define(["jarallax", "jarallaxVideo", "jquery", "jquery/z-index", "mage/translate
     _proto.getBackgroundImage = function getBackgroundImage() {
       var mobileImage = this.contentType.dataStore.get("mobile_image");
       var desktopImage = this.contentType.dataStore.get("background_image");
-      var backgroundImage = this.viewport() === "mobile" && mobileImage.length ? mobileImage : desktopImage;
+      var tabletImage = this.contentType.dataStore.get("background_image_tablet");
+      var backgroundImage = desktopImage;
+      if (mobileImage && this.viewport() === "mobile") {
+        backgroundImage = mobileImage;
+      }
+      if (tabletImage && this.viewport() === "tablet") {
+        backgroundImage = tabletImage;
+      }
       return backgroundImage.length ? "url(\"" + backgroundImage[0].url + "\")" : "none";
     }
     /**

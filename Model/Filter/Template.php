@@ -320,6 +320,12 @@ class Template extends \Magento\PageBuilder\Model\Filter\Template
                 'background-image' => 'url(' . $images['desktop_image'] . ')',
             ];
         }
+        // NOTE: add custom media query for tablet
+        if (isset($images['tablet_image'])) {
+            $css['@media (max-width: 1023px)']['.' . $elementClass] = [
+                'background-image' => 'url(' . $images['tablet_image'] . ')',
+            ];
+        }
         if (isset($images['mobile_image']) && $this->getMediaQuery('mobile')) {
             $css[$this->getMediaQuery('mobile')]['.' . $elementClass] = [
                 'background-image' => 'url(' . $images['mobile_image'] . ')',

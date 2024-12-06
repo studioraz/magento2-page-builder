@@ -36,6 +36,7 @@ define(["Magento_PageBuilder/js/utils/object"], function (_object) {
 
       if (backgroundType === "video") {
         (0, _object.set)(data, config.desktop_image_variable, []);
+        (0, _object.set)(data, config.tablet_image_variable, []);
         (0, _object.set)(data, config.mobile_image_variable, []);
       } else if (backgroundType === "image") {
         (0, _object.set)(data, config.video_source_variable, null);
