@@ -12,17 +12,19 @@ use Magento\Framework\View\Element\Template;
  */
 ?>
 <style>
-    [data-content-type="banner"].has-size {
-        /* NOTE: default values */
-
-    }
     @media (max-width: 639px) {
         [data-content-type="banner"].has-size .pagebuilder-overlay,
         [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
             aspect-ratio: var(--image-width-mobile, var(--image-width-desktop)) / var(--image-height-mobile, var(--image-height-desktop));
         }
     }
-    @media (min-width: 640px) {
+    @media (min-width: 640px) and (max-width: 1023px) {
+        [data-content-type="banner"].has-size .pagebuilder-overlay,
+        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-tablet) / var(--image-height-tablet);
+        }
+    }
+    @media (min-width: 1024px) {
         [data-content-type="banner"].has-size .pagebuilder-overlay,
         [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
             aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);

@@ -7,9 +7,21 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
-    <type name="banner">
+    <type name="banner" preview_component="SR_PageBuilder/js/content-type/banner/preview">
         <appearances>
             <appearance name="collage-left">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
                 <elements>
                     <element name="main">
                         <style name="image_width_desktop"
@@ -17,6 +29,12 @@
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_height_desktop"
                                source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_tablet"
+                               source="css_var_image_width_tablet"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_tablet"
+                               source="css_var_image_height_tablet"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_width_mobile"
                                source="css_var_image_width_mobile"
@@ -28,6 +46,18 @@
                 </elements>
             </appearance>
             <appearance name="collage-centered">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
                 <elements>
                     <element name="main">
                         <style name="image_width_desktop"
@@ -35,6 +65,12 @@
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_height_desktop"
                                source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_tablet"
+                               source="css_var_image_width_tablet"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_tablet"
+                               source="css_var_image_height_tablet"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_width_mobile"
                                source="css_var_image_width_mobile"
@@ -46,6 +82,18 @@
                 </elements>
             </appearance>
             <appearance name="collage-right">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
                 <elements>
                     <element name="main">
                         <style name="image_width_desktop"
@@ -53,6 +101,12 @@
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_height_desktop"
                                source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_tablet"
+                               source="css_var_image_width_tablet"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_tablet"
+                               source="css_var_image_height_tablet"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_width_mobile"
                                source="css_var_image_width_mobile"
@@ -64,6 +118,18 @@
                 </elements>
             </appearance>
             <appearance name="poster">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
                 <elements>
                     <element name="main">
                         <style name="image_width_desktop"
@@ -71,6 +137,12 @@
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_height_desktop"
                                source="css_var_image_height_desktop"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_width_tablet"
+                               source="css_var_image_width_tablet"
+                               reader="SR_PageBuilder/js/property/css-variable-reader"/>
+                        <style name="image_height_tablet"
+                               source="css_var_image_height_tablet"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
                         <style name="image_width_mobile"
                                source="css_var_image_width_mobile"
