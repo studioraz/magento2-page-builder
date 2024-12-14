@@ -5,7 +5,7 @@
  * See LICENSE for license details.
  */
 -->
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd" extends="pagebuilder_base_form">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <fieldset name="appearance_fieldset">
         <field name="image_width_desktop" sortOrder="21" formElement="input">
             <settings>
@@ -25,7 +25,25 @@
                 </validation>
             </settings>
         </field>
-        <field name="image_width_mobile" sortOrder="23" formElement="input">
+        <field name="image_width_tablet" sortOrder="23" formElement="input">
+            <settings>
+                <label translate="true">Image Width Tablet</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="image_height_tablet" sortOrder="24" formElement="input">
+            <settings>
+                <label translate="true">Image Height Tablet</label>
+                <notice translate="true">Single number with no units</notice>
+                <validation>
+                    <rule name="validate-number" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="image_width_mobile" sortOrder="25" formElement="input">
             <settings>
                 <label translate="true">Image Width Mobile</label>
                 <notice translate="true">Single number with no units</notice>
@@ -34,7 +52,7 @@
                 </validation>
             </settings>
         </field>
-        <field name="image_height_mobile" sortOrder="24" formElement="input">
+        <field name="image_height_mobile" sortOrder="26" formElement="input">
             <settings>
                 <label translate="true">Image Height Mobile</label>
                 <notice translate="true">Single number with no units</notice>

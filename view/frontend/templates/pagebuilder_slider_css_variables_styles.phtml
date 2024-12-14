@@ -13,24 +13,48 @@ use Magento\Framework\View\Element\Template;
  * @var Escaper $escaper
  */
 ?>
-
 <style>
-    .pagebuilder-slider.has-size {
-        min-height: auto !important;
-    }
-
     @media (max-width: 639px) {
         .pagebuilder-slider.has-size [data-content-type="slide"],
         .pagebuilder-slider.has-size .pagebuilder-slide-wrapper {
-            aspect-ratio: var(--image-width-mobile, var(--image-width-desktop)) / var(--image-height-mobile, var(--image-height-desktop));
+            aspect-ratio: var(
+                --image-width-mobile,
+                var(
+                    --image-width-tablet,
+                    var(--image-width-desktop)
+                )
+            ) / var(
+                --image-height-mobile,
+                var(
+                    --image-height-tablet,
+                    var(--image-height-desktop)
+                )
+            );
         }
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 640px) and (max-width: 1023px) {
+        .pagebuilder-slider.has-size [data-content-type="slide"],
+        .pagebuilder-slider.has-size .pagebuilder-slide-wrapper {
+            aspect-ratio: var(
+                --image-width-tablet,
+                var(--image-width-desktop)
+            ) / var(
+                --image-height-tablet,
+                var(--image-height-desktop)
+            );
+        }
+    }
+
+    @media (min-width: 1024px) {
         .pagebuilder-slider.has-size [data-content-type="slide"],
         .pagebuilder-slider.has-size .pagebuilder-slide-wrapper {
             aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);
         }
+    }
+
+    .pagebuilder-slider.has-size {
+        min-height: auto !important;
     }
 
     .pagebuilder-slider.has-size .pagebuilder-slide-wrapper {

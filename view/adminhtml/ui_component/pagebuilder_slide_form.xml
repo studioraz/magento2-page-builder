@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="background">
+        <field name="background_image_tablet" sortOrder="35" formElement="imageUploader">
+            <settings>
+                <label translate="true">Background Tablet Image</label>
+                <componentType>imageUploader</componentType>
+                <visible>false</visible>
+                <imports>
+                    <link name="visible">${$.parentName}.background_type:imageVisible</link>
+                </imports>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <maxFileSize>2097152</maxFileSize>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">pagebuilder/contenttype/image_upload</param>
+                        </uploaderConfig>
+                        <previewTmpl>Magento_PageBuilder/form/element/uploader/preview</previewTmpl>
+                    </settings>
+                </imageUploader>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

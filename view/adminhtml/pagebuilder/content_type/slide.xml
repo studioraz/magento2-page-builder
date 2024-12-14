@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2024 Studio Raz. All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="slide" preview_component="SR_PageBuilder/js/content-type/slide/preview">
+        <appearances>
+            <appearance name="collage-left">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
+            </appearance>
+            <appearance name="collage-centered">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
+            </appearance>
+            <appearance name="collage-right">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
+            </appearance>
+            <appearance name="poster">
+                <converters>
+                    <converter name="background_type" component="SR_PageBuilder/js/mass-converter/background-type">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                    <converter name="background_images" component="SR_PageBuilder/js/mass-converter/background-images">
+                        <config>
+                            <item name="tablet_image_variable" value="background_image_tablet"/>
+                        </config>
+                    </converter>
+                </converters>
+            </appearance>
+        </appearances>
+    </type>
+</config>
