@@ -15,50 +15,50 @@ use Magento\Framework\View\Element\Template;
 ?>
 <style>
     @media (max-width: 639px) {
-        [data-content-type="banner"].has-size .pagebuilder-overlay,
-        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
-            aspect-ratio: var(
-                --image-width-mobile,
-                var(
-                    --image-width-tablet,
-                    var(--image-width-desktop)
-                )
-            ) / var(
-                --image-height-mobile,
-                var(
-                    --image-height-tablet,
-                    var(--image-height-desktop)
-                )
-            );
+        [data-content-type="banner"].has-size-mobile .pagebuilder-overlay,
+        [data-content-type="banner"].has-size-mobile .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-mobile) / var(--image-height-mobile);
+        }
+
+        [data-content-type="banner"].has-size-mobile .pagebuilder-banner-wrapper {
+            width: 100%;
+            min-height: auto !important;
+        }
+
+        [data-content-type="banner"].has-size-mobile .pagebuilder-overlay {
+            min-height: auto !important;
         }
     }
 
     @media (min-width: 640px) and (max-width: 1023px) {
-        [data-content-type="banner"].has-size .pagebuilder-overlay,
-        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
-            aspect-ratio: var(
-                --image-width-tablet,
-                var(--image-width-desktop)
-            ) / var(
-                --image-height-tablet,
-                var(--image-height-desktop)
-            );
+        [data-content-type="banner"].has-size-tablet .pagebuilder-overlay,
+        [data-content-type="banner"].has-size-tablet .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-tablet) / var(--image-height-tablet);
+        }
+
+        [data-content-type="banner"].has-size-tablet .pagebuilder-banner-wrapper {
+            width: 100%;
+            min-height: auto !important;
+        }
+
+        [data-content-type="banner"].has-size-tablet .pagebuilder-overlay {
+            min-height: auto !important;
         }
     }
 
     @media (min-width: 1024px) {
-        [data-content-type="banner"].has-size .pagebuilder-overlay,
-        [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
+        [data-content-type="banner"].has-size-desktop .pagebuilder-overlay,
+        [data-content-type="banner"].has-size-desktop .pagebuilder-banner-wrapper {
             aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);
         }
-    }
 
-    [data-content-type="banner"].has-size .pagebuilder-banner-wrapper {
-        width: 100%;
-        min-height: auto !important;
-    }
+        [data-content-type="banner"].has-size-desktop .pagebuilder-banner-wrapper {
+            width: 100%;
+            min-height: auto !important;
+        }
 
-    [data-content-type="banner"].has-size .pagebuilder-overlay {
-        min-height: auto !important;
+        [data-content-type="banner"].has-size-desktop .pagebuilder-overlay {
+            min-height: auto !important;
+        }
     }
 </style>

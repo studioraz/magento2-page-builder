@@ -17,15 +17,21 @@ use Magento\Framework\View\Element\Template;
 <script>
     (() => {
         const elements = document.querySelectorAll('[data-content-type="banner"]');
-        const cssVarNames = ['--image-width-desktop', '--image-height-desktop'];
+        const cssVarSet = {
+            desktop: ['--image-width-desktop', '--image-height-desktop'],
+            tablet: ['--image-width-tablet', '--image-height-tablet'],
+            mobile: ['--image-width-mobile', '--image-height-mobile'],
+        };
 
         Array.from(elements).forEach(element => {
-            const hasSize = cssVarNames.filter(cssVarName => {
-                return getComputedStyle(element).getPropertyValue(cssVarName).trim();
-            }).length === cssVarNames.length;
+            for (const [breakpointName, cssVars] of Object.entries(cssVarSet)) {
+                const hasSize = cssVars.filter(varName => {
+                    return getComputedStyle(element).getPropertyValue(varName).trim();
+                }).length === cssVars.length;
 
-            if (hasSize) {
-                element.classList.add('has-size');
+                if (hasSize) {
+                    element.classList.add(`has-size-${breakpointName}`);
+                }
             }
         });
     })();
