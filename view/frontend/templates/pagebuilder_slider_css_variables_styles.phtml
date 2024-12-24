@@ -37,6 +37,10 @@ use Magento\Framework\View\Element\Template;
         .pagebuilder-slider.has-size-mobile .pagebuilder-overlay {
             min-height: auto !important;
         }
+
+        .pagebuilder-slider.has-size-mobile [data-element=content] {
+            min-height: auto !important;
+        }
     }
 
     @media (min-width: 640px) and (max-width: 1023px) {
@@ -62,6 +66,10 @@ use Magento\Framework\View\Element\Template;
         .pagebuilder-slider.has-size-tablet .pagebuilder-overlay {
             min-height: auto !important;
         }
+
+        .pagebuilder-slider.has-size-tablet [data-element=content] {
+            min-height: auto !important;
+        }
     }
 
     @media (min-width: 1024px) {
@@ -85,6 +93,10 @@ use Magento\Framework\View\Element\Template;
         }
 
         .pagebuilder-slider.has-size-desktop .pagebuilder-overlay {
+            min-height: auto !important;
+        }
+
+        .pagebuilder-slider.has-size-desktop [data-element=content] {
             min-height: auto !important;
         }
     }
