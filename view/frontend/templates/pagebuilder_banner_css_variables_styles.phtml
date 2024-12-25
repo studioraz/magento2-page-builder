@@ -12,65 +12,34 @@ use Magento\Framework\View\Element\Template;
  * @var Template $block
  * @var Escaper $escaper
  */
+
+$breakpoints = [
+    'mobile' => '(max-width: 639px)',
+    'tablet' => '(min-width: 640px) and (max-width: 1023px)',
+    'desktop' => '(min-width: 1024px)',
+];
 ?>
+
 <style>
-    @media (max-width: 639px) {
-        [data-content-type="banner"].has-size-mobile .pagebuilder-overlay,
-        [data-content-type="banner"].has-size-mobile .pagebuilder-banner-wrapper {
-            aspect-ratio: var(--image-width-mobile) / var(--image-height-mobile);
+    <?php foreach ($breakpoints as $name => $query): ?>
+    @media <?= $query ?> {
+        [data-content-type="banner"][data-has-size-<?= $name ?>="true"] .pagebuilder-overlay,
+        [data-content-type="banner"][data-has-size-<?= $name ?>="true"] .pagebuilder-banner-wrapper {
+            aspect-ratio: var(--image-width-<?= $name ?>) / var(--image-height-<?= $name ?>);
         }
 
-        [data-content-type="banner"].has-size-mobile .pagebuilder-banner-wrapper {
+        [data-content-type="banner"][data-has-size-<?= $name ?>="true"] .pagebuilder-banner-wrapper {
             width: 100%;
             min-height: auto !important;
         }
 
-        [data-content-type="banner"].has-size-mobile .pagebuilder-overlay {
+        [data-content-type="banner"][data-has-size-<?= $name ?>="true"] .pagebuilder-overlay {
             min-height: auto !important;
         }
 
-        [data-content-type="banner"].has-size-mobile [data-element=content] {
-            min-height: auto !important;
-        }
-    }
-
-    @media (min-width: 640px) and (max-width: 1023px) {
-        [data-content-type="banner"].has-size-tablet .pagebuilder-overlay,
-        [data-content-type="banner"].has-size-tablet .pagebuilder-banner-wrapper {
-            aspect-ratio: var(--image-width-tablet) / var(--image-height-tablet);
-        }
-
-        [data-content-type="banner"].has-size-tablet .pagebuilder-banner-wrapper {
-            width: 100%;
-            min-height: auto !important;
-        }
-
-        [data-content-type="banner"].has-size-tablet .pagebuilder-overlay {
-            min-height: auto !important;
-        }
-
-        [data-content-type="banner"].has-size-tablet [data-element=content] {
+        [data-content-type="banner"][data-has-size-<?= $name ?>="true"] [data-element=content] {
             min-height: auto !important;
         }
     }
-
-    @media (min-width: 1024px) {
-        [data-content-type="banner"].has-size-desktop .pagebuilder-overlay,
-        [data-content-type="banner"].has-size-desktop .pagebuilder-banner-wrapper {
-            aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);
-        }
-
-        [data-content-type="banner"].has-size-desktop .pagebuilder-banner-wrapper {
-            width: 100%;
-            min-height: auto !important;
-        }
-
-        [data-content-type="banner"].has-size-desktop .pagebuilder-overlay {
-            min-height: auto !important;
-        }
-
-        [data-content-type="banner"].has-size-desktop [data-element=content] {
-            min-height: auto !important;
-        }
-    }
+    <?php endforeach; ?>
 </style>

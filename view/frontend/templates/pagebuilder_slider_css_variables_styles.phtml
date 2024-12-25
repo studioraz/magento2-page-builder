@@ -12,92 +12,43 @@ use Magento\Framework\View\Element\Template;
  * @var Template $block
  * @var Escaper $escaper
  */
+
+$breakpoints = [
+    'mobile' => '(max-width: 639px)',
+    'tablet' => '(min-width: 640px) and (max-width: 1023px)',
+    'desktop' => '(min-width: 1024px)',
+];
 ?>
+
 <style>
-    @media (max-width: 639px) {
-        .pagebuilder-slider.has-size-mobile [data-content-type="slide"],
-        .pagebuilder-slider.has-size-mobile .pagebuilder-slide-wrapper {
-            aspect-ratio: var(--image-width-mobile) / var(--image-height-mobile);
+    <?php foreach ($breakpoints as $name => $query): ?>
+    @media <?= $query ?> {
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] [data-content-type="slide"],
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] .pagebuilder-slide-wrapper {
+            aspect-ratio: var(--image-width-<?= $name ?>) / var(--image-height-<?= $name ?>);
         }
 
-        .pagebuilder-slider.has-size-mobile {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-mobile .pagebuilder-slide-wrapper {
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] .pagebuilder-slide-wrapper {
             width: 100%;
             min-height: auto !important;
         }
 
-        .pagebuilder-slider.has-size-mobile [data-content-type="slide"] > div {
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] .pagebuilder-overlay {
+            min-height: auto !important;
+        }
+
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] [data-element=content] {
+            min-height: auto !important;
+        }
+
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] {
+            min-height: auto !important;
+        }
+
+        [data-content-type="slider"][data-has-size-<?= $name ?>="true"] [data-content-type="slide"] > div {
             display: flex;
             justify-content: center;
         }
-
-        .pagebuilder-slider.has-size-mobile .pagebuilder-overlay {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-mobile [data-element=content] {
-            min-height: auto !important;
-        }
     }
-
-    @media (min-width: 640px) and (max-width: 1023px) {
-        .pagebuilder-slider.has-size-tablet [data-content-type="slide"],
-        .pagebuilder-slider.has-size-tablet .pagebuilder-slide-wrapper {
-            aspect-ratio: var(--image-width-tablet) / var(--image-height-tablet);
-        }
-
-        .pagebuilder-slider.has-size-tablet {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-tablet .pagebuilder-slide-wrapper {
-            width: 100%;
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-tablet [data-content-type="slide"] > div {
-            display: flex;
-            justify-content: center;
-        }
-
-        .pagebuilder-slider.has-size-tablet .pagebuilder-overlay {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-tablet [data-element=content] {
-            min-height: auto !important;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .pagebuilder-slider.has-size-desktop [data-content-type="slide"],
-        .pagebuilder-slider.has-size-desktop .pagebuilder-slide-wrapper {
-            aspect-ratio: var(--image-width-desktop) / var(--image-height-desktop);
-        }
-
-        .pagebuilder-slider.has-size-desktop {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-desktop .pagebuilder-slide-wrapper {
-            width: 100%;
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-desktop [data-content-type="slide"] > div {
-            display: flex;
-            justify-content: center;
-        }
-
-        .pagebuilder-slider.has-size-desktop .pagebuilder-overlay {
-            min-height: auto !important;
-        }
-
-        .pagebuilder-slider.has-size-desktop [data-element=content] {
-            min-height: auto !important;
-        }
-    }
+    <?php endforeach; ?>
 </style>
