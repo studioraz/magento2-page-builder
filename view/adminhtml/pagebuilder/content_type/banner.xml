@@ -24,6 +24,15 @@
                 </converters>
                 <elements>
                     <element name="main">
+                        <attribute name="has_size_desktop"
+                                   source="data-has-size-desktop"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_tablet"
+                                   source="data-has-size-tablet"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_mobile"
+                                   source="data-has-size-mobile"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
                         <style name="image_width_desktop"
                                source="css_var_image_width_desktop"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
@@ -60,6 +69,15 @@
                 </converters>
                 <elements>
                     <element name="main">
+                        <attribute name="has_size_desktop"
+                                   source="data-has-size-desktop"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_tablet"
+                                   source="data-has-size-tablet"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_mobile"
+                                   source="data-has-size-mobile"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
                         <style name="image_width_desktop"
                                source="css_var_image_width_desktop"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
@@ -96,6 +114,15 @@
                 </converters>
                 <elements>
                     <element name="main">
+                        <attribute name="has_size_desktop"
+                                   source="data-has-size-desktop"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_tablet"
+                                   source="data-has-size-tablet"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_mobile"
+                                   source="data-has-size-mobile"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
                         <style name="image_width_desktop"
                                source="css_var_image_width_desktop"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
@@ -132,6 +159,15 @@
                 </converters>
                 <elements>
                     <element name="main">
+                        <attribute name="has_size_desktop"
+                                   source="data-has-size-desktop"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_tablet"
+                                   source="data-has-size-tablet"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
+                        <attribute name="has_size_mobile"
+                                   source="data-has-size-mobile"
+                                   converter="SR_PageBuilder/js/content-type/abstract/converter/attribute/has-size"/>
                         <style name="image_width_desktop"
                                source="css_var_image_width_desktop"
                                reader="SR_PageBuilder/js/property/css-variable-reader"/>
