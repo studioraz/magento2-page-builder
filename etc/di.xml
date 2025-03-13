@@ -26,4 +26,7 @@
             </argument>
         </arguments>
     </virtualType>
+    <type name="Magento\CatalogWidget\Block\Product\ProductsList">
+        <plugin name="pagebuilder_product_list_filter_stock" type="SR\PageBuilder\Plugin\Catalog\Block\Product\ProductsListPlugin" />
+    </type>
 </config>
