@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="products"
+          label="Products"
+          component="Magento_PageBuilder/js/content-type"
+          preview_component="Magento_PageBuilder/js/content-type/products/preview"
+          form="pagebuilder_products_form"
+          menu_section="add_content"
+          icon="icon-pagebuilder-products"
+          sortOrder="20"
+          translate="label">
+        <appearances>
+            <appearance name="carousel"
+                        preview_template="Magento_PageBuilder/content-type/products/grid/preview"
+                        master_template="Magento_PageBuilder/content-type/products/grid/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <form>pagebuilder_products_carousel_form</form>
+                <converters>
+                    <converter component="SR_PageBuilder/js/content-type/products/mass-converter/carousel-widget-directive" name="widget_directive">
+                        <config>
+                            <item name="html_variable" value="html"/>
+                        </config>
+                    </converter>
+                </converters>
+            </appearance>
+        </appearances>
+    </type>
+</config>
