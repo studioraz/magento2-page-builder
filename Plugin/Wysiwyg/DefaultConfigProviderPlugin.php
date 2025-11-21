@@ -61,7 +61,7 @@ class DefaultConfigProviderPlugin
 
         $settings['plugins'] = $this->getPlugins();
 
-        $settings['toolbar1'] = 'magentovariable magentowidget | prosewrapper | formatselect | styleselect | fontselect | fontsizeselect | lineheight | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ltr rtl';
+        $settings['toolbar1'] = 'magentovariable magentowidget | formatselect | styleselect | fontselect | fontsizeselect | lineheight | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | ltr rtl';
         $settings['toolbar2'] = ' undo redo  | link anchor table charmap | image media insertdatetime | widget | searchreplace visualblocks  help | hr pagebreak | emoticons';
         $settings['force_p_newlines'] = false;
 
@@ -110,7 +110,6 @@ class DefaultConfigProviderPlugin
             'magentovariable', // Specific to Magento, allows for inserting Magento variables
             'magentowidget', // Specific to Magento, enables inserting Magento widgets
             'emoticons', // Adds a button to insert emoticons
-            'prosewrapper', // Adds a button to wrap content in div with class prose for Hyva theme
         ];
 
         return implode(' ', $plugins);
