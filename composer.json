@@ -3,7 +3,6 @@
     "description": "Magento 2 module to change the page builder TinyMCE settings",
     "type": "magento2-module",
     "prefer-stable": true,
-    "version": "1.9.0",
     "license": [
         "proprietary"
     ],
